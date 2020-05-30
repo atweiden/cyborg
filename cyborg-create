@@ -24,7 +24,7 @@ _usage() {
 read -r -d '' _usage_string <<EOF
 Usage:
   $PROGNAME [-h|--help]
-  $PROGNAME create <archive> <path> [<path> <path>..]
+  $PROGNAME <archive> <path> [<path> <path>..]
 
 Options:
   -h, --help      Show this help text
