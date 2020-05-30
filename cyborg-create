@@ -96,7 +96,7 @@ fi
 # $_borg_create_exit_code contains exit code for executed `borg create`
 _borg_create_exit_code=""
 
-# function borg_create evals `borg create` and stores exit code in
+# function borg_create executes `borg create` and stores exit code in
 # $_borg_create_exit_code
 borg_create() {
   # $_args contains list of arguments passed to function borg_create
