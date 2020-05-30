@@ -100,8 +100,8 @@ _borg_create_exit_code=""
 # function borg_create evals $BORG_CREATE_CMD and stores exit code in
 # $_borg_create_exit_code
 borg_create() {
-  # $_args contains the arguments passed to this function
-  local _args
+  # $_args contains list of arguments passed to function borg_create
+  local _args=()
 
   # $_archive_name contains name of borgbackup/borg archive
   local _archive_name
@@ -112,7 +112,7 @@ borg_create() {
   # $_paths_for_archival contains list of paths to files for borg archival
   local _paths_for_archival
 
-  _args="$@"
+  _args=("$@")
   _archive_name="$1"
   _paths_for_archival="${_args[@]:1}"
 
