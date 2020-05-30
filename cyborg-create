@@ -7,7 +7,7 @@
 # ==============================================================================
 # constants {{{
 
-# $DATE_TIME contains present utc full date and time
+# $DATETIME contains present utc full date and time
 readonly DATETIME="$(date --utc '+%FT%T')"
 
 # $PROGNAME contains name of this program
@@ -105,8 +105,10 @@ borg_create() {
   _opts+=('--verbose'
           '--stats'
           '--progress')
+
   # don't cross filesystem boundaries
   _opts+=('--one-file-system')
+
   # anticipate remote host connection errors
   # see: https://github.com/borgbackup/borg/issues/3988#issuecomment-478807213
   _opts+=('--lock-wait=600')
